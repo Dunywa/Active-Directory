@@ -1,34 +1,38 @@
-# 🧰 Project Title
-> *Enter a clear, professional project title here.*
-
-**Example:**  
-“Active Directory + DHCP + DNS Redundant Setup in Multi-Site Environment”
+# Active Directory + DHCP + DNS Redundant Setup in Multi-Site Environment”
 
 ---
 
 ## 🧭 Objective / Scenario
-Explain **why** you did this project and **what problem** it solves or simulates.
+This project simulates a multi-site corporate network where two branch offices are connected using Windows Server Routing & Remote Access Service (RRAS) to establish a secure site-to-site VPN. Each site hosts a Windows Server 2022 Domain Controller providing AD, DNS, and DHCP with failover
 
-> **Example:**  
-> Simulate a multi-site organization with redundancy, centralized management, and automated IP assignment using Windows Server and PFsense.
+The objective is to showcase real MSP-style infrastructure skills using Windows Server only (no PFsense or 3rd-party firewall), including:
 
-Include:
-- Business or technical motivation  
-- Scope (lab or production simulation)  
-- Goals of the project  
+- RRAS routing & IPSec VPN
+
+- Multi-site Active Directory
+
+- DHCP Failover
+
+- DNS integration
+
+- AD Sites & Services replication
+
+- Multi-subnet domain join & routing
+
+This project demonstrates proficiency across Microsoft infrastructure, routing, VPN, and enterprise network design.
 
 ---
 
 ## 🌐 Network Topology Diagram
-Visualize your setup with a **simple, clear diagram**.
+Each RRAS server acts as:
 
-> Tools: Draw.io, Lucidchart, PFsense screenshots, or ASCII diagram.
+- WAN router/gateway
 
-**Example:**
+- Firewall
 
+- VPN tunnel endpoint
 
-*(Attach your diagram image below)*  
-`![Network Diagram](./diagram.png)`
+- Inter-subnet router
 
 ---
 
