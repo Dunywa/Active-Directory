@@ -1,4 +1,4 @@
-# Active Directory + DHCP + DNS Redundant Setup in Multi-Site Environment”
+# Active Directory + DHCP + DNS Redundant Setup in Multi-Site Environment
 
 ---
 
