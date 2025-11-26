@@ -41,10 +41,10 @@ List all **hardware**, **software**, and **tools** used.
 
 | Component | Description |
 |------------|--------------|
-| **Servers** | Windows Server 2022 (2x) |
+| **Servers** | Windows Server 2022 and Windows Server 2025 |
 | **Clients** | Windows 10 Pro (2x) |
-| **Firewalls / Routers** | PFsense (2x) |
-| **Hypervisor** | VMware Workstation / ESXi |
+| **Firewalls / Routers** | Windows Server2019 (2x) |
+| **Hypervisor** | Hyyper-V |
 | **Network Setup** | HQ – 192.168.10.0/24, Branch – 192.168.20.0/24 |
 | **Other Tools** | PowerShell, Server Manager, Event Viewer |
 
