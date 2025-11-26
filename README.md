@@ -47,10 +47,10 @@ Each RRAS server acts as:
 ## ⚙️ Requirements / Environment
 | Component | Description |
 |------------|--------------|
-| **Servers** | Windows Server 2022 and Windows Server 2025 |
+| **DC Servers** | Windows Server 2022 and Windows Server 2025 |
 | **Clients** | Windows 10 Pro (2x) |
 | **Firewalls / Routers** | Windows Server 2019 and 2022 |
-| **Hypervisor** | Hyyper-V |
+| **Hypervisor** | Hyper-V |
 | **Other Tools** | PowerShell, Server Manager, Event Viewer |
 
 ---
