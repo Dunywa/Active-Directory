@@ -5,7 +5,7 @@
 ## 🧭 Objective / Scenario
 This project simulates a multi-site corporate network where two branch offices are connected using Windows Server Routing & Remote Access Service (RRAS) to establish a secure site-to-site VPN. Each site hosts a Windows Server 2022 Domain Controller providing AD, DNS, and DHCP with failover
 
-The objective is to showcase real MSP-style infrastructure skills using Windows Server only (no PFsense or 3rd-party firewall), including:
+The objective is to showcase real MSP-style infrastructure skills using Windows Server only, including:
 
 - RRAS routing & IPSec VPN
 
@@ -24,6 +24,14 @@ This project demonstrates proficiency across Microsoft infrastructure, routing, 
 ---
 
 ## 🌐 Network Topology Diagram
+|  Site                |  Domain Controller  |  Subnet          | DC Server IP   | Router IP     | WAN IP        | Description   | 
+|----------------------|---------------------|------------------|----------------|---------------|---------------|---------------|
+| Headquarters (HQ)    | MVHO-DC1            | 192.168.1.0\24   | 192.168.1.1    | 192.168.1.1   | 10.0.0.1      | Main DC Site  |
+|Branch Office (BO)    | MVBO-DC2            | 192.168.2.0\24   | 192.168.2.2    | 192.168.2.1   | 10.0.0.2      | Remote DC Site| 
+
+Each subnet is connected via a site-to-site link (VPN or static route between routers).
+So DC1 and DC2 can ping each other across subnets.
+
 Each RRAS server acts as:
 
 - WAN router/gateway
@@ -37,30 +45,24 @@ Each RRAS server acts as:
 ---
 
 ## ⚙️ Requirements / Environment
-List all **hardware**, **software**, and **tools** used.
-
 | Component | Description |
 |------------|--------------|
 | **Servers** | Windows Server 2022 and Windows Server 2025 |
 | **Clients** | Windows 10 Pro (2x) |
 | **Firewalls / Routers** | Windows Server2019 (2x) |
 | **Hypervisor** | Hyyper-V |
-| **Network Setup** | HQ – 192.168.10.0/24, Branch – 192.168.20.0/24 |
+| **Network Range** | HQ – 192.168.1.0/24, Branch – 192.168.2.0/24 |
 | **Other Tools** | PowerShell, Server Manager, Event Viewer |
 
 ---
 
 ## 🧩 Design Plan / Steps Overview
-Provide a **high-level roadmap** of the configuration steps before execution.  
 
-> **Example:**
-> 1. Configure PFsense routers and VPN  
-> 2. Promote two Windows Servers as Domain Controllers  
-> 3. Configure DHCP scopes per subnet  
-> 4. Configure DNS replication  
-> 5. Test site-to-site communication and failover  
-
-*(This section shows your project flow before you dive into details.)*
+- Configured site-to-site VPN (IPSec Tunnel) to connect the two sites  
+- Promote two Windows Servers as Domain Controllers  
+- Configure DHCP scopes per subnet  
+- Configure DNS replication  
+- Test site-to-site communication and failover
 
 ---
 
