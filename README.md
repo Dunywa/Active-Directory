@@ -24,10 +24,10 @@ This project demonstrates proficiency across Microsoft infrastructure, routing, 
 ---
 
 ## 🌐 Network Topology Diagram
-|  Site                |  Domain Controller  |  Subnet          | DC Server IP   | Router IP     | WAN IP        | Description   | 
+|  Site                |  Domain Controller  |  LAN Subnet          | DC Server IP   | Router IP     | WAN IP        | Description   | 
 |----------------------|---------------------|------------------|----------------|---------------|---------------|---------------|
-| Headquarters (HQ)    | MVHO-DC1            | 192.168.1.0\24   | 192.168.1.1    | 192.168.1.1   | 10.0.0.1      | Main DC Site  |
-|Branch Office (BO)    | MVBO-DC2            | 192.168.2.0\24   | 192.168.2.2    | 192.168.2.1   | 10.0.0.2      | Remote DC Site| 
+| Headquarters (HQ)    | MVHO-DC1            | 192.168.1.0/24   | 192.168.1.1    | 192.168.1.1   | 10.0.0.1      | Main DC Site  |
+|Branch Office (BO)    | MVBO-DC2            | 192.168.2.0/24   | 192.168.2.2    | 192.168.2.1   | 10.0.0.2      | Remote DC Site| 
 
 Each subnet is connected via a site-to-site link (VPN or static route between routers).
 So DC1 and DC2 can ping each other across subnets.
@@ -49,9 +49,8 @@ Each RRAS server acts as:
 |------------|--------------|
 | **Servers** | Windows Server 2022 and Windows Server 2025 |
 | **Clients** | Windows 10 Pro (2x) |
-| **Firewalls / Routers** | Windows Server2019 (2x) |
+| **Firewalls / Routers** | Windows Server 2019 and 2022 |
 | **Hypervisor** | Hyyper-V |
-| **Network Range** | HQ – 192.168.1.0/24, Branch – 192.168.2.0/24 |
 | **Other Tools** | PowerShell, Server Manager, Event Viewer |
 
 ---
